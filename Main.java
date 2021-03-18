@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) throws Exception {
 
@@ -30,7 +31,18 @@ public class Main {
         Shape anotherCircle = new Circle();
         Shape anotherSquare = new Square();
         
-        //ARRAY OF OBJECTS TO BE ADDED NEXT TIME
+        //ARRAY OF OBJECTS
+
+        Shape[] smallPizza = new Circle[5];
+
+        for(int i = 0 ; i < smallPizza.length; i++){
+            smallPizza[i] = new Circle("inches", "yellow", i+3); 
+            System.out.println(smallPizza[i].getArea());
+        }
+
+        for(Shape i : smallPizza){
+            System.out.println(i.getColor());
+        }
 
     }
 }
